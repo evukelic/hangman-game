@@ -9,7 +9,9 @@ import { store } from "./redux/store";
 createRoot(document.getElementById("root")!).render(
   <StyledEngineProvider injectFirst>
     <Provider store={store}>
-      <App />
+      <StrictMode>
+        <App />
+      </StrictMode>
     </Provider>
   </StyledEngineProvider>
 );
