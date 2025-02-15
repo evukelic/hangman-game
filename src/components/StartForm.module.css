@@ -1,0 +1,50 @@
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.startButton {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  height: fit-content;
+  padding: 0.3rem;
+}
+
+.errorText {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+
+  @media screen and (max-width: 600px) {
+    width: 30%;
+  }
+  @media screen and (max-width: 490px) {
+    width: 50%;
+  }
+}
+
+.input {
+  width: 100%;
+}
+
+.inputText {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.inputLabel {
+  font-size: 1.5rem;
+}
+
+.helperText {
+  color: red;
+  font-size: 1rem;
+}

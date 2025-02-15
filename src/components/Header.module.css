@@ -1,0 +1,36 @@
+.container {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerIcon {
+  width: 100%;
+  margin-left: 1rem;
+  padding: 0.5rem;
+
+  @media screen and (max-width: 490px) {
+    margin-left: 0.5rem;
+    padding: 0;
+  }
+}
+
+.link {
+  width: 3%;
+
+  @media screen and (max-width: 490px) {
+    width: 5%;
+  }
+}
+
+.user {
+  margin-right: 1rem;
+  width: fit-content;
+
+  @media screen and (max-width: 490px) {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+}

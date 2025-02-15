@@ -1,0 +1,43 @@
+.errorItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.errorText {
+  color: red;
+}
+
+.gallows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1rem;
+}
+
+.actionsContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.actionsContainer button {
+  font-size: 1.5rem;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  @media screen and (max-width: 490px) {
+    font-size: 1rem;
+  }
+}
+
+.leaderboardBtn {
+  margin-top: 1rem;
+}

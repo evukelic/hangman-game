@@ -1,0 +1,13 @@
+.leaderboardList {
+  width: 100%;
+  max-width: 30%;
+  max-height: 70%;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  margin-top: 2rem;
+
+  @media screen and (max-width: 490px) {
+    max-width: 60%;
+  }
+}
