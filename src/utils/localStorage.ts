@@ -14,7 +14,9 @@ export const setLocalStorageItem = (key: string, value: any): void => {
 };
 
 export const getRandomLocalStorageItem = (): any | null => {
-  const keys: string[] = Object.keys(localStorage);
+  const keys: string[] = Object.keys(localStorage).filter((key) =>
+    key.startsWith(LOCAL_STORAGE_KEY)
+  );
   const randomKey: string = keys[Math.floor(Math.random() * keys.length)];
 
   return JSON.parse(getLocalStorageItem(randomKey)!);
@@ -24,4 +26,8 @@ export const getNumberOfStoredQuotes = () => {
   const keys: string[] = Object.keys(localStorage);
 
   return keys.filter((key) => key.startsWith(LOCAL_STORAGE_KEY)).length;
+};
+
+export const removeLocalStorageItem = (key: string): void => {
+  localStorage.removeItem(LOCAL_STORAGE_KEY + key);
 };

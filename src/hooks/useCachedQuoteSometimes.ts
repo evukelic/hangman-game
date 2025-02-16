@@ -5,6 +5,7 @@ import { APIFetchStatus } from "../utils/enums";
 import {
   getNumberOfStoredQuotes,
   getRandomLocalStorageItem,
+  removeLocalStorageItem,
   setLocalStorageItem,
 } from "../utils/localStorage";
 
@@ -35,6 +36,8 @@ export function useCachedQuoteSometimes(
     if (cachedQuote) {
       setQuoteData(cachedQuote);
       setStatus(APIFetchStatus.SUCCESS);
+
+      removeLocalStorageItem(cachedQuote._id);
       return;
     }
 

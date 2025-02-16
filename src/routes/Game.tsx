@@ -147,17 +147,19 @@ const Game = () => {
         />
       </Box>
 
-      <Box className={styles.alphabet}>
-        {ALPHABET.map((letter, index) => (
-          <LetterButton
-            key={index}
-            letter={letter}
-            index={index}
-            disabled={lettersClicked.has(letter)}
-            onClick={() => handleLetterClick(letter)}
-          />
-        ))}
-      </Box>
+      {status !== APIFetchStatus.ERROR && (
+        <Box className={styles.alphabet}>
+          {ALPHABET.map((letter, index) => (
+            <LetterButton
+              key={index}
+              letter={letter}
+              index={index}
+              disabled={lettersClicked.has(letter)}
+              onClick={() => handleLetterClick(letter)}
+            />
+          ))}
+        </Box>
+      )}
 
       {scoreError && <ErrorSnackbar error={scoreError} />}
     </Box>
